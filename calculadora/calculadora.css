@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Genos:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Genos',Arial, Helvetica, sans-serif;
+    background-color: midnightblue;
+}
+
+html,body{
+    height: 100%;
+}
+
+/* */
+
+header{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+/* */ 
+
+header .titulo{
+    width: max-content;
+    margin: 1em auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .titulo h1{
+    font-size: 100px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+header .titulo img{
+    width: 100px;
+    height: 100px;
+    margin:0 0 0 2em;
+}
+
+/* */
+
+main{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+/* */
+
+main .numeros{
+    width: 33.3%;
+    margin: 2em auto;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+}
+
+main .numeros input[type=button]{
+    width: 100px;
+    height: 100px;
+    font-size: 70px;
+    color: whitesmoke;
+    background-color: blue;
+}
+
+main .numeros input[type=button]:hover{
+    cursor: pointer;
+    transition: 0.2s;
+    background-color:rgb(47, 47, 253);
+}
+
+/* */

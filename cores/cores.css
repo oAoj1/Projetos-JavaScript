@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
+
+*{
+    font-family: 'Kanit',sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+}
+
+.clear{
+    clear: both;
+}
+
+/* */
+
+header{
+    width: 100%;
+    height: auto;
+}
+
+header h1{
+    margin:1em 0;
+    text-align: center;
+    font-size: 60px;
+}
+
+/* */
+
+main{
+    width: 100%;
+    height: auto;
+}
+
+main .cores{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3em auto;
+}
+
+main .cores input[type=button]{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: 1px solid black;
+    margin: 0 1em;
+}
+
+main .cores input[type=button]:hover{
+    cursor: pointer;
+}
