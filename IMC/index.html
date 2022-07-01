@@ -68,7 +68,7 @@
         box-shadow: 2px 3px black;
     }
 
-    .resultados{
+    #resultados{
         width: 100%;
        margin:auto;
        text-align: center;
@@ -91,7 +91,7 @@
         <input type="submit" value="enviar" onclick="calcular()">
     </div><!--ajustar-->
 
-    <div class="resultados">
+    <div id="resultados">
         <div id="rp"></div>
         <div id="ra"></div>
         <div id="rimc"></div>
@@ -101,21 +101,30 @@
 
     <script>
         function calcular(){
+
+            //pegando elemento peso e altura
             var p = window.document.getElementById('peso')
             var a = window.document.getElementById('altura')
+
+            //validando peso e altura
             var peso = p.value
             var altura = a.value
+            
+            //calculando imc
             var imc = Math.round(peso / (altura*altura))
 
+            //pegando elemento dos resultados peso, altura, imc e classificação
             var rp = window.document.getElementById('rp')
             var ra = window.document.getElementById('ra')
             var rimc = window.document.getElementById('rimc')
             var classi = window.document.getElementById('classi')
 
+            //escrevendo na tela os resultados
             rp.innerHTML = `<strong>Peso:</strong> ${peso}`
             ra.innerHTML = `<strong>Altura:</strong> ${altura}`
             rimc.innerHTML = `<strong>IMC:</strong> ${imc}`
 
+            //declarando condições para as classificações
             if(imc < 18.5){
                 classi.innerHTML = `<strong>Classificação:</strong> Abaixo do peso`
             }
