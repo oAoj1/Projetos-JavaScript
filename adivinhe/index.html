@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="adivinha.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Scada&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Scada',Arial, Helvetica, sans-serif;
+        }
+
+        h1{
+            text-transform: uppercase;
+            margin: auto;
+            text-align: center;
+            font-size: 3em;
+            margin-top: 1em;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        }
+
+        #numero-jogador{
+            text-align: center;
+            margin:1em auto;
+            max-width: max-content;
+            display: flex;
+            outline: none;
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 0.5em;
+            font-size: 1.5em;
+        }
+
+        .enviar{
+            text-align: center;
+            margin:1em auto;
+            max-width: max-content;
+            display: flex;
+            outline: none;
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 0.5em;
+            font-size: 1.5em;
+            text-transform: uppercase;
+        }
+
+        .enviar:hover{
+            cursor: pointer;
+            box-shadow: 2px 3px black;
+            background-color: grey;
+            color: whitesmoke;
+            transition: 0.2s;
+        }
+
+        #resultado{
+            text-align: center;
+            margin: 1em auto;
+            display: flex;
+            font-size: 3em;
+            width: max-content;
+        }
+
+    </style>
+    <title>Adivinhe</title>
+</head>
+<body>
+    
+    <h1>De 0 a 5, <br> pensei no numero...</h1>
+    <input type="number" name="" id="numero-jogador" step="any">
+    <input type="submit" value="enviar" class="enviar" onclick="adivinhe()">
+
+    <div id="resultado"></div>
+
+    <script>
+        function adivinhe(){
+            //pegando elementos
+            var num = window.document.getElementById('numero-jogador')
+            var resultado = window.document.getElementById('resultado')
+
+            //definindo valores
+            var numero_jogador = (num.value)
+            var numero_pc = Math.round(Math.random()*5)
+            
+            //condições
+            if(numero_jogador == numero_pc){
+                resultado.innerHTML = `Voce acertou!!`
+                resultado.style.color = 'cyan'
+            }else{
+                resultado.innerHTML = `Voce errou... era numero ${numero_pc}`
+                resultado.style.color = 'red'
+            }
+        }
+    </script>
+
+</body>
+</html>
