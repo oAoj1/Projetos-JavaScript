@@ -74,7 +74,7 @@
 </head>
 <body>
     
-    <h1>De 0 a 5, <br> pensei no numero...</h1>
+    <h1>De 1 a 5, <br> pensei no numero...</h1>
     <input type="number" name="" id="numero-jogador" step="any">
     <input type="submit" value="enviar" class="enviar" onclick="adivinhe()">
 
@@ -89,14 +89,19 @@
             //definindo valores
             var numero_jogador = (num.value)
             var numero_pc = Math.round(Math.random()*5)
+            console.log(`${numero_jogador}${numero_pc}`)
             
             //condições
             if(numero_jogador == numero_pc){
                 resultado.innerHTML = `Voce acertou!!`
                 resultado.style.color = 'cyan'
-            }else{
+            }else if(numero_jogador != numero_pc){
                 resultado.innerHTML = `Voce errou... era numero ${numero_pc}`
                 resultado.style.color = 'red'
+            }
+            if(numero_jogador == 0){
+                resultado.innerHTML = 'Invalido'
+                resultado.style.color = 'black'
             }
         }
     </script>
