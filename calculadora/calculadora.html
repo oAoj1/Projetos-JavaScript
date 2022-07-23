@@ -10,29 +10,79 @@
 </head>
 <body>
 
-    <header>
-        <div class="titulo">
-        <h1>Calculadora</h1>
-        </div><!--titulo-->
-    </header>
+<div class="container">
+    <div class="calculadora">
+        <h1>calculadora</h1>
+        <p id="resultado"></p>
+        <table>
+            <tr>
+                <td>
+                    <button onclick="limpar()">c</button>
+                </td>
+                <td>
+                    <button onclick="voltar()"><</button>
+                </td>
+                <td>
+                    <button onclick="adicionar('/')">/</button>
+                </td>
+                <td>
+                    <button onclick="adicionar('*')">*</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="adicionar('7')">7</button>
+                </td>
+                <td>
+                    <button onclick="adicionar('8')">8</button>
+                </td>
+                <td>
+                    <button onclick="adicionar('9')">9</button>
+                </td>
+                <td>
+                    <button onclick="adicionar('-')">-</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="adicionar('4')">4</button>
+                </td>
+                <td>
+                    <button onclick="adicionar('5')">5</button>
+                </td>
+                <td>
+                    <button onclick="adicionar('6')">6</button>
+                </td>
+                <td>
+                    <button onclick="adicionar('+')">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="adicionar('1')">1</button>
+                </td>
+                <td>
+                    <button onclick="adicionar('2')">2</button>
+                </td>
+                <td>
+                    <button onclick="adicionar('3')">3</button>
+                </td>
+                <td rowspan="2">
+                    <button onclick="calcular()" style="height: 175px;">=</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button onclick="adicionar('0')" style="width: 175px;">0</button>
+                </td>
+                <td>
+                    <button onclick="adicionar('.')">.</button>
+                </td>
+            </tr>
+        </table>
+    </div><!--calculadora-->
+</div>
 
-    <main>
-
-        <div class="numeros">
-            <input type="button" value="1">
-            <input type="button" value="2">
-            <input type="button" value="3">
-            <br>
-            <input type="button" value="4">
-            <input type="button" value="5">
-            <input type="button" value="6">
-            <br>
-            <input type="button" value="7">
-            <input type="button" value="8">
-            <input type="button" value="9">
-        </div><!--numeros-->
-    
-    </main>
 
     <script src="calculadora.js"></script>
 </body>
