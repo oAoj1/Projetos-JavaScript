@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="adivinha.png" type="image/x-icon">
+    <link rel="stylesheet" href="adivinha.css">
+    <title>Adivinhe</title>
+</head>
+<body>
+
+    <div class="container-colum-intro">
+        <h1>Escolha</h1>
+        <h2>3 Chances 5 Numeros</h2>
+        <button onclick="esconder()" class="escolha"></button>
+        <br>
+        <h2>5 Chances 3 Numeros</h2>
+        <button onclick="esconder()" class="escolha"></button>
+    </div>
+
+    <div id="escolha1">
+        <div class="container-colum">
+            <h1>De 0 a 5, pensei no...</h1>
+            <input type="number" name="" id="cinctext">
+            <button onclick="cinco()">Enviar</button>
+        <div id="resultado1"></div>
+        </div>
+    </div>
+
+    <div id="escolha2">
+        <div class="container-colum">
+            <h1>De 0 a 3, pensei no...</h1>
+            <input type="number" name="" id="tretext">
+            <button oncanplay="tres()">Enviar</button>
+        <div id="resultado2"></div>
+        </div>
+    </div>
+
+    <script src="advinha.js"></script>
+</body>
+</html>
