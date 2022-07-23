@@ -12,72 +12,56 @@ html,body{
 }
 
 /* */
-
-header{
+.container{
     width: 100%;
-    height: auto;
-    position: relative;
-}
-
-header h1{
-    text-align: center;
-    font-size: 60px;
-    margin: 1em 0;
-}
-
-/* */
-
-main{
-    width: 100%;
-    height: auto;
-    position: relative;
-}
-
-main .paises{
+    max-width: 1200px;
+    margin: auto;
+    flex-direction: column;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
-main .paises input[type=text]{
-    width: 300px;
+h1{
+    padding: 2em 0 0.5em 0;
+    font-size: 3em;
+}
+
+input[type=text]{
+    width: 100%;
+    height: auto;
+    max-width: 350px;
     height: 50px;
-    border-radius: 10px;
-    border: 1px solid black;
-    outline: none;
-    background-color: lightgray;
     padding: 1em;
-    font-size: 20px;
-}
-
-main .paises input[type=submit]{
-    width: max-content;
-    padding: 7px;
-    margin-left: 1em;
     border-radius: 10px;
-    outline: none;
-    border: 1px solid black;
-    font-size: 20px;
-    background-color: blueviolet;
-    color: whitesmoke;
+    border: 1px solid #000;
+    outline: 0;
+    font-size: 2em;
 }
 
-main .paises input[type=submit]:hover{
+button{
+    width: 100%;
+    max-width: 250px;
+    padding: 0.2em;
+    font-size: 2em;
+    border-radius: 10px;
+    border: 0;
+    background-color: #dc143c;
     cursor: pointer;
-    background-color: rgb(88, 22, 150);
+    transition: 0.3s;
 }
 
-main #resultado{
-    margin: 2em 0 1em 0;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    font-size: 30px;
+button:hover{
+    transform: translateY(-5px);
+    box-shadow: 2px 2px #000;
+    background-color: #ff0033;
 }
 
-main #resultado_paises{
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    font-size: 30px;
+#resultado{
+    width: 100%;
+    max-width: max-content;
+    margin: auto;
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
 }

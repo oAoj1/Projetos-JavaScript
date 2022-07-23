@@ -1,5 +1,3 @@
-var resultado = document.querySelector('#resultado')
-
 function adicionar(num){
     var res = document.querySelector('#resultado').innerHTML
     resultado.innerHTML = res + num

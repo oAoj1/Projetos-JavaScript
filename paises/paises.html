@@ -10,46 +10,17 @@
 </head>
 <body>
 
-    <header>
-        <h1>Que país você é?</h1>
-    </header>
-
-    <main>
-        <div class="paises">
-            <input type="text" name="" id="pais">
-            <input type="submit" value="Enviar" onclick="enviar()">
-        </div><!--paises-->
-
+    <div class="container">
+        <h1>De que pais voce é?</h1>
+        <input type="text" id="paises">
+        <br>
+        <button onclick="enviar()">Enviar</button>
+        <br>
         <div id="resultado"></div>
-        <div id="resultado_paises"></div>
-    </main>
 
-    <script>
-        function enviar(){
-            //pais
-            var pais = window.document.getElementById('pais')
+    </div><!--container-->
 
-            //resultados
-            var resultado = window.document.getElementById('resultado')
-            var resultado_paises = window.document.getElementById('resultado_paises')
+    <script defer src="paises.js"></script>
 
-            //valores
-            var paises = (pais.value)
-
-            resultado.innerHTML = `<strong>País:</strong> ${paises}`
-
-            //condicoes
-            if(paises == 'brasil' || paises == 'Brasil'){
-                resultado_paises.innerHTML = 'Voce é de casa!'
-            }else{
-                resultado_paises.innerHTML = 'Voce é gringo!'
-            }
-            if(paises == 0){
-                resultado.innerHTML = 'Invalido'
-                resultado_paises.innerHTML = ' '
-            }
-        }
-    </script>
-    
 </body>
 </html>
