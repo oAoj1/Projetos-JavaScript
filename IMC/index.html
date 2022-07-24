@@ -51,6 +51,7 @@
     }
 
     .ajustar input[type=submit]{
+        transition: 0.2s;
         margin: 1em auto;
         width: 200px;
         height: 50px;
@@ -101,7 +102,6 @@
 
     <script>
         function calcular(){
-
             //pegando elemento peso e altura
             var p = window.document.getElementById('peso')
             var a = window.document.getElementById('altura')
@@ -118,30 +118,62 @@
             var ra = window.document.getElementById('ra')
             var rimc = window.document.getElementById('rimc')
             var classi = window.document.getElementById('classi')
-
-            //escrevendo na tela os resultados
-            rp.innerHTML = `<strong>Peso:</strong> ${peso}`
-            ra.innerHTML = `<strong>Altura:</strong> ${altura}`
-            rimc.innerHTML = `<strong>IMC:</strong> ${imc}`
+            var resultados = document.querySelector('#resultados')          
 
             //declarando condições para as classificações
+            if(p.value.length == 0 && a.value.length == 0){
+                alert('Adicione peso E altura')
+            }else if(p.value.length == 0 || a.value.length == 0){
+                alert('Dados insuficientes')
+            }
+
             if(imc < 18.5){
+                rp.innerHTML = `<strong>Peso:</strong> ${peso}`
+                ra.innerHTML = `<strong>Altura:</strong> ${altura}`
+                rimc.innerHTML = `<strong>IMC:</strong> ${imc}`
                 classi.innerHTML = `<strong>Classificação:</strong> Abaixo do peso`
             }
             if(imc >= 18.5 && imc <= 24.9){
+                rp.innerHTML = `<strong>Peso:</strong> ${peso}`
+                ra.innerHTML = `<strong>Altura:</strong> ${altura}`
+                rimc.innerHTML = `<strong>IMC:</strong> ${imc}`
                 classi.innerHTML = `<strong>Classificação:</strong> Peso Normal`
             }
             if(imc >= 25 && imc <= 29.9){
+                rp.innerHTML = `<strong>Peso:</strong> ${peso}`
+                ra.innerHTML = `<strong>Altura:</strong> ${altura}`
+                rimc.innerHTML = `<strong>IMC:</strong> ${imc}`
                 classi.innerHTML = `<strong>Classificação:</strong> Sobrepeso`
             }
             if(imc >= 30 && imc <= 34.9){
+                rp.innerHTML = `<strong>Peso:</strong> ${peso}`
+                ra.innerHTML = `<strong>Altura:</strong> ${altura}`
+                rimc.innerHTML = `<strong>IMC:</strong> ${imc}`
                 classi.innerHTML = `<strong>Classificação:</strong> Obesidade grau 1`
             }
             if(imc >= 35 && imc <= 39.9){
+                rp.innerHTML = `<strong>Peso:</strong> ${peso}`
+                ra.innerHTML = `<strong>Altura:</strong> ${altura}`
+                rimc.innerHTML = `<strong>IMC:</strong> ${imc}`
                 classi.innerHTML = `<strong>Classificação:</strong> Obesidade grau 2`
             }
             if(imc > 40){
+                rp.innerHTML = `<strong>Peso:</strong> ${peso}`
+                ra.innerHTML = `<strong>Altura:</strong> ${altura}`
+                rimc.innerHTML = `<strong>IMC:</strong> ${imc}`
                 classi.innerHTML = `<strong>Classificação:</strong> Obesidade grau 3`
+            }
+            if(imc == 0){
+                classi.innerHTML = ''
+                rimc.innerHTML = ''
+                rp.innerHTML = ''
+                ra.innerHTML = ''
+            }
+            if(imc == Infinity){
+                classi.innerHTML = ''
+                rimc.innerHTML = ''
+                rp.innerHTML = ''
+                ra.innerHTML = ''
             }
         }
 
