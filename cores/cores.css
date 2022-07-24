@@ -11,10 +11,6 @@ html,body{
     height: 100%;
 }
 
-.clear{
-    clear: both;
-}
-
 /* */
 
 header{
@@ -30,6 +26,10 @@ header h1{
 
 /* */
 
+#fundo{
+    transition: 0.3s;
+}
+
 main{
     width: 100%;
     height: auto;
@@ -40,6 +40,7 @@ main .cores{
     align-items: center;
     justify-content: center;
     margin: 3em auto;
+    transition: 0.3s;
 }
 
 main .cores input[type=button]{
