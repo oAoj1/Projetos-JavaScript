@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="notas.css">
-    <link rel="shortcut icon" href="imagens/education.png" type="image/x-icon">
+    <link rel="shortcut icon" href="education.png" type="image/x-icon">
     <title>Notas</title>
 </head>
 <body id="cor_nota">
@@ -13,15 +13,90 @@
     <section>
         <h1 class="titulo">média de notas</h1>
         <div class="dados">
-        <form action="">
-            <input class="info" type="text" name="" id="txtaluno" placeholder="Nome">
-            <input class="info" type="text" name="" id="txtmateria" placeholder="Matéria">
-            <input class="info" type="number" name="" id="txtnotas" placeholder="Nota">
-            <button onclick="enviar()">Enviar</button>
-            <p id="resultado">
-                <img src="imagens/education.png" id="imagem">
-            </p>
-        </form>
+            <div id="formulario">
+                <input class="info" type="text" name="" id="txtaluno" placeholder="Nome">
+                <br>
+
+                <div class="disciplinas">
+
+                    <div class="container">
+                        <input type="radio" name="disciplina" id="Matemática">
+                        <label for="Matemática">Matemática</label>
+                    </div>
+
+                    <div class="container">
+                        <input type="radio" name="disciplina" id="Português">
+                        <label for="Português">Português</label>
+                    </div>
+
+                    <div class="container">
+                        <input type="radio" name="disciplina" id="Fisica">
+                        <label for="Fisica">Fisica</label>
+                    </div>
+
+                    <div class="container">
+                        <input type="radio" name="disciplina" id="História">
+                        <label for="História">História</label>
+                    </div>
+
+                    <div class="container">
+                        <input type="radio" name="disciplina" id="Química">
+                        <label for="Química">Química</label>
+                    </div>
+
+                    <div class="container">
+                        <input type="radio" name="disciplina" id="Biologia">
+                        <label for="Biologia">Biologia</label>
+                    </div>
+
+                    <div class="container">
+                        <input type="radio" name="disciplina" id="Inglês">
+                        <label for="Inglês">Inglês</label>
+                    </div>
+
+                    <div class="container">
+                        <input type="radio" name="disciplina" id="Sociologia">
+                        <label for="Sociologia">Sociologia</label>
+                    </div>
+                    
+                    <div class="container">
+                        <input type="radio" name="disciplina" id="Filosofia">
+                        <label for="Filosofia">Filosofia</label>
+                    </div>
+
+                    <div class="container">
+                        <input type="radio" name="disciplina" id="Tecnologia">
+                        <label for="Tecnologia">Tecnologia</label>
+                    </div>
+
+                    <div class="container">
+                        <input type="radio" name="disciplina" id="Fisica">
+                        <label for="Fisica">Fisica</label>
+                    </div>
+
+                    <div class="container">
+                        <input type="radio" name="disciplina" id="Artes">
+                        <label for="Artes">Artes</label>
+                    </div>
+
+                    <div class="container">
+                        <input type="radio" name="disciplina" id="Educação-física">
+                        <label for="Educação física">Educação física</label>
+                    </div>
+
+                </div><!--disciplinas-->
+
+                <br>
+                <input class="nota" type="number" name="" id="txtnota" placeholder="Nota">
+                <input type="submit" class="adicionar" onclick="adicionar()" value="Adicionar nota">
+                <p class="total-nota">Total notas: 5</p>
+                <select name="" id="tabela" size="5"></select>
+                <div id="resultado-notas" ></div>
+                <button class="enviar" onclick="enviar()">Enviar</button>
+                <div id="resultado">
+                    <img src="education.png" id="imagem">
+                </div>
+            </div><!--formulario-->
         </div><!--dados-->
         
     </section>
