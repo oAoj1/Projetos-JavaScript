@@ -135,6 +135,7 @@ label{
     text-transform: uppercase;
     margin: 1em auto;
     color: #000;
+    text-align: left;
 }
 
 #imagem{
