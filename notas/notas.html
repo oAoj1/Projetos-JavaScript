@@ -20,7 +20,7 @@
                 <div class="disciplinas">
 
                     <div class="container">
-                        <input type="radio" name="disciplina" id="Matemática">
+                        <input type="radio" name="disciplina" id="Matemática" checked>
                         <label for="Matemática">Matemática</label>
                     </div>
 
@@ -28,6 +28,21 @@
                         <input type="radio" name="disciplina" id="Português">
                         <label for="Português">Português</label>
                     </div>
+
+                    <div class="container">
+                        <input type="radio" name="disciplina" id="Tecnologia">
+                        <label for="Tecnologia">Tecnologia</label>
+                    </div>
+
+                    <div class="container">
+                        <input type="radio" name="disciplina" id="Educação-física">
+                        <label for="Educação física">Educação física</label>
+                    </div>
+
+                    <div class="container">
+                        <input type="radio" name="disciplina" id="Artes">
+                        <label for="Artes">Artes</label>
+                    </div>  
 
                     <div class="container">
                         <input type="radio" name="disciplina" id="Fisica">
@@ -64,38 +79,21 @@
                         <label for="Filosofia">Filosofia</label>
                     </div>
 
-                    <div class="container">
-                        <input type="radio" name="disciplina" id="Tecnologia">
-                        <label for="Tecnologia">Tecnologia</label>
-                    </div>
-
-                    <div class="container">
-                        <input type="radio" name="disciplina" id="Fisica">
-                        <label for="Fisica">Fisica</label>
-                    </div>
-
-                    <div class="container">
-                        <input type="radio" name="disciplina" id="Artes">
-                        <label for="Artes">Artes</label>
-                    </div>
-
-                    <div class="container">
-                        <input type="radio" name="disciplina" id="Educação-física">
-                        <label for="Educação física">Educação física</label>
-                    </div>
-
                 </div><!--disciplinas-->
 
                 <br>
                 <input class="nota" type="number" name="" id="txtnota" placeholder="Nota">
                 <input type="submit" class="adicionar" onclick="adicionar()" value="Adicionar nota">
+
                 <p class="total-nota">Total notas: 5</p>
                 <select name="" id="tabela" size="5"></select>
-                <div id="resultado-notas" ></div>
+
+                <div id="resultado-notas"></div>
                 <button class="enviar" onclick="enviar()">Enviar</button>
-                <div id="resultado">
-                    <img src="education.png" id="imagem">
-                </div>
+                <br>
+                <img src="education.png" id="imagem">
+                <div id="resultado"></div>
+
             </div><!--formulario-->
         </div><!--dados-->
         

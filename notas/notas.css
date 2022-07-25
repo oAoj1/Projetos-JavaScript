@@ -132,7 +132,14 @@ label{
 }
 
 #resultado{
-    margin: 2em 0 0 0;
+    text-transform: uppercase;
+    margin: 1em auto;
+    color: #000;
+}
+
+#imagem{
+    text-align: center;
+    margin: 3em auto 1em 0;
 }
 
 #resultado-notas{
@@ -152,4 +159,5 @@ label{
     margin: 3em 0 0 0;
     padding: 1em;
     overflow: hidden;
+    border-radius: 20px;
 }
