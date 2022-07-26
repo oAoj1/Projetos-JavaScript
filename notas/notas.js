@@ -121,5 +121,15 @@ function enviar(){
             resultado.innerHTML += `<strong>Média final:</strong> ${media}<br>`  
             img.src = 'imagens/filosofia.png'
         }
+        var fundo = document.querySelector('main')
+        if(media >= 5){
+            resultado.innerHTML += '<strong>Situação:</strong> Aprovado'
+            fundo.classList.add('aprovado')
+        }else if(media < 5){
+            resultado.innerHTML += '<strong>Situação:</strong> Repovado'
+            fundo.classList.add('reprovado')
+        }
+        a.value.length = ''
+        lista_nota.length = ''
     }
 }
